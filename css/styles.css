@@ -169,8 +169,35 @@ p {
 =============== 
 Navbar
 ===============
-*/
 
+*/
+.nav-links {
+  display: none;
+}
+.nav {
+  height: 5rem;
+  padding: 1rem;
+  display: grid;
+  align-items: center;
+}
+.nav-center {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+.nav-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+}
+.nav-btn {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--clr-primary-5);
+  cursor: pointer;
+  justify-self: end;
+  font-size: 2rem;
+}
 /*
 =============== 
 Sidebar
