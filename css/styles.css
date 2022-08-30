@@ -164,7 +164,17 @@ p {
     width: 95vw;
   }
 }
-
+.underline {
+  width: 5rem;
+  height: 0.25rem;
+  margin-bottom: 1.25rem;
+  background: var(--clr-primary-5);
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero-img{
+  display: none;
+}
 /*
 =============== 
 Navbar
@@ -295,6 +305,7 @@ Sidebar
   align-items: center;
   justify-items: center;
   width: 20rem;
+  margin-top: 3rem;
 }
 .social-icon {
   font-size: 1.5rem;
@@ -308,7 +319,25 @@ Hero
 ===============
 */
 /* underline added to globals */
-
+.hero .underline {
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+}
+.hero{
+  background-color: var(--clr-primary-10);
+}
+.hero-center{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+ height: calc(100vh - 5rem);
+}
+.hero-info .social-icons{
+  justify-items: start;
+}
+.hero-info .hero-btn {
+    margin-top: 1.24rem;
+}
 /*
 =============== 
 About
