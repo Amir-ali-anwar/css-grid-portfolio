@@ -159,6 +159,9 @@ p {
   margin: 0 auto;
   max-width: 1170px;
 }
+.bg-grey {
+  background-color: var(--clr-grey-10);
+}
 @media screen and (min-width: 992px) {
   .section-center {
     width: 95vw;
@@ -172,7 +175,10 @@ p {
   margin-left: auto;
   margin-right: auto;
 }
-
+.section-title {
+  margin-bottom: 4rem;
+  text-align: center;
+}
 /*
 =============== 
 Navbar
@@ -348,17 +354,8 @@ Hero
   }
   .hero-center {
     grid-template-columns: repeat(2, 1fr);
-    
   }
- .hero-photo {
-    max-width: 25rem;
-    max-height: 30rem;
-    -o-object-fit: cover;
-    object-fit: cover;
-    border-radius: var(--radius);
-    /* place the image in front of ::before */
-    position: relative;
-  }
+  .about-img::before,
   .hero-img::before {
     content: "";
     position: absolute;
@@ -370,19 +367,94 @@ Hero
     border-radius: var(--radius);
   }
 }
+.hero-photo {
+  max-width: 25rem;
+  max-height: 30rem;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: var(--radius);
+  /* place the image in front of ::before */
+  position: relative;
+}
 /*
 =============== 
 About
 ===============
 */
 /* section title added to globals */
-
+.about-title {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+.about-title .underline {
+  margin-left: 0;
+}
+.about-center {
+  display: grid;
+  gap: 3rem 2rem;
+}
+.about-img {
+  justify-self: center;
+}
+@media screen and (min-width: 992px) {
+  .about-center {
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-img {
+    position: relative;
+  }
+  .about-img::before {
+    left: -2rem;
+  }
+}
 /*
 =============== 
 Services
 ===============
 */
 /* small screen layout setup */
+.service {
+  background-color: var(--clr-white);
+  padding: 3rem 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: var(--radius);
+  text-align: center;
+  transition: var(--transition);
+}
+.service .service-icon {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.service .underline {
+  width: 3rem;
+  height: 0.12rem;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.service:hover {
+  background: var(--clr-primary-5);
+  color: var(--clr-white);
+}
+.service:hover .underline {
+  background: var(--clr-white);
+}
+.service:hover p {
+  color: var(--clr-white);
+}
+@media screen and (min-width: 768px) {
+  .services-center {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .services-center {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+  }
+}
 /* bg-grey in globals */
 
 /*
@@ -390,7 +462,78 @@ Services
 Projects
 ===============
 */
+.projects-text {
+  width: 85vw;
+  max-width: 30rem;
+  margin: 0 auto;
+}
 
+.project {
+  position: relative;
+  background: var(--clr-primary-5);
+  border-radius: var(--radius);
+  margin-bottom: 2rem;
+}
+.project-info {
+  text-align: center;
+  color: var(--clr-white);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  opacity: 0;
+}
+.project-info p {
+  text-transform: capitalize;
+  color: var(--clr-white);
+}
+.project:hover .project-info {
+  opacity: 1;
+}
+.project-img {
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  border-radius: var(--radius);
+  height: 15rem;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.project:hover .project-img {
+  opacity: 0.1;
+}
+.project::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0.25rem solid var(--clr-white);
+  border-radius: var(--radius);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  opacity: 0;
+}
+.project:hover::after {
+  opacity: 1;
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+}
+@media screen and (min-width:676px){
+  .projects-center{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 2rem;
+  }
+} 
+@media screen and (min-width:676px){
+  .projects-center{
+    grid-template-columns: repeat(3,1fr);
+  }
+} 
 /*
 =============== 
 Connect
