@@ -522,24 +522,24 @@ Projects
   -webkit-transform: scale(0.8);
   transform: scale(0.8);
 }
-@media screen and (min-width:676px){
-  .projects-center{
+@media screen and (min-width: 676px) {
+  .projects-center {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
   }
-} 
-@media screen and (min-width:676px){
-  .projects-center{
-    grid-template-columns: repeat(3,1fr);
+}
+@media screen and (min-width: 676px) {
+  .projects-center {
+    grid-template-columns: repeat(3, 1fr);
   }
-} 
+}
 /*
 =============== 
 Connect
 ===============
 */
-.connect{
+.connect {
   min-height: 40vh;
   position: relative;
   padding: 10rem 0 5rem 0;
@@ -565,21 +565,21 @@ Connect
     0% 75%
   );
 }
-.connect::after{
-  content:'';
-  position:absolute;
+.connect::after {
+  content: "";
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: var(--clr-white);
-  opacity:0.7;
+  opacity: 0.7;
   z-index: -1;
 }
-.video-banner .section-title{
+.video-banner .section-title {
   margin-bottom: 2rem;
 }
-.video-container{
+.video-container {
   position: absolute;
   top: 0;
   left: 0;
@@ -588,11 +588,11 @@ Connect
   object-fit: cover;
 }
 .video-banner {
-    position: relative;
-    background-color: var(--clr-primary-10);
-    padding: 3rem 5rem 12rem 5rem;
-    text-align: center;
-    -webkit-clip-path: polygon(
+  position: relative;
+  background-color: var(--clr-primary-10);
+  padding: 3rem 5rem 12rem 5rem;
+  text-align: center;
+  -webkit-clip-path: polygon(
     0% 0%,
     100% 0%,
     100% 75%,
@@ -611,7 +611,7 @@ Connect
     0% 75%
   );
 }
-.video-text{
+.video-text {
   max-width: 30rem;
 }
 .connect {
@@ -630,6 +630,72 @@ Connect
 Skills
 ===============
 */
+@media screen and (min-width: 768px) {
+  .skills-center {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2em;
+  }
+}
+  .skills {
+    background: var(--clr-primary-9);
+  }
+  .skills h3 {
+    margin: 1.5rem 0;
+    color: var(--clr-primary-1);
+  }
+  .skill {
+    margin-bottom: 1.25rem;
+  }
+  .skill p {
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+    color: var(--clr-primary-1);
+  }
+  .skill-container {
+    height: 1rem;
+    width: 100%;
+    background: var(--clr-white);
+    border-radius: var(--radius);
+    position: relative;
+  }
+  .skill-text {
+    position: absolute;
+    top: -2rem;
+    right: 0;
+}
+.skill-value {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    background: var(--clr-primary-5);
+    border-radius: var(--radius);
+    display: grid;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.value-70 {
+  width: 70%;
+}
+.value-80 {
+  width: 80%;
+}
+.skill-text {
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.skill-text-70 {
+  left: 70%;
+}
+.skill-text-80 {
+  left: 80%;
+}
+
 /*
 =============== 
 Timeline
